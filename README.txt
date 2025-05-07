@@ -1,4 +1,4 @@
-Evolve and Thrive with M365: Enhancing Security for Tomorrow
+Evolve and Thrive with M365: Enhancing Security for Tomorrow
        __
       /oo\
      |    |
