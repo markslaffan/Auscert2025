@@ -1,3 +1,18 @@
+Evolve and Thrive with M365: Enhancing Security for Tomorrow
+       __
+      /oo\
+     |    |
+ ^^  (vvvv)   ^^
+ \\  /\__/\  //
+  \\/      \//
+   /        \        
+  |          |    ^  
+  /          \___/ | 
+ (            )     |
+  \----------/     /
+    //    \\_____/
+   W       W
+
 In today’s dynamic cyber landscape, evolving and thriving requires a proactive approach to security. Join us for an engaging and comprehensive workshop designed to elevate your security posture with Microsoft 365. This workshop will provide you with the tools, knowledge, and hands-on experience needed to enhance your organisation’s security and efficiency.
 
 Key Topics Covered:
