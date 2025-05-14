@@ -8,11 +8,11 @@ Connect-MgGraph -Scopes IdentityRiskEvent.Read.All -NoWelcome
 $endDate = (Get-Date -Day 1).AddSeconds(-1) # Last second of the last day of the previous month
 $startDate = $endDate.AddMonths(-1).AddDays(1 - $endDate.Day) # First day of the previous month
 
-# Define the output CSV file paths with unique month and year
+# Define the output CSV file paths with unique month and year - rename the files if required
 $outputFolder = "C:$($env:HOMEPATH)\Documents\output"
 $outputCsvPath = "$outputFolder\riskyusers_$($startDate.ToString('yyyy_MM-dd')).csv"
-$outputCsvPathAcu = "$outputFolder\riskyusers_acu_$($startDate.ToString('yyyy_MM-dd')).csv"
-$outputCsvPathMyAcu = "$outputFolder\riskyusers_myacu_$($startDate.ToString('yyyy_MM-dd')).csv"
+$outputCsvPathDomain1 = "$outputFolder\riskyusers_Domain1_$($startDate.ToString('yyyy_MM-dd')).csv"
+$outputCsvPathDomain2 = "$outputFolder\riskyusers_Domain2_$($startDate.ToString('yyyy_MM-dd')).csv"
 
 # Create the output folder if it doesn't exist
 if (-not (Test-Path -Path $outputFolder)) {
@@ -44,8 +44,8 @@ $riskDetections | Export-Csv -Path $outputCsvPath -NoTypeInformation
 #$riskDetectionsDomain1 = $riskDetections | Where-Object { $_.UserPrincipalName -like "*@xxx.xxx.au" }
 #$riskDetectionsDomain2 = $riskDetections | Where-Object { $_.UserPrincipalName -like "*@xxx.xxx.au" }
 
-#$riskDetectionsDomain1 | Export-Csv -Path $outputCsvPathAcu -NoTypeInformation
-#$riskDetectionsDomain2 | Export-Csv -Path $outputCsvPathMyAcu -NoTypeInformation
+#$riskDetectionsDomain1 | Export-Csv -Path $outputCsvPathDomain1 -NoTypeInformation
+#$riskDetectionsDomain2 | Export-Csv -Path $outputCsvPathDomain2 -NoTypeInformation
 
 # Count 'high' risk levels
 #$highRiskCountDomain1 = ($riskDetectionsDomain1 | Where-Object { $_.RiskLevel -eq 'high' }).Count
